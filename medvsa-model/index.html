@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>&lt;model-viewer&gt; template</title>
+    <meta charset="utf-8">
+    <meta name="description" content="&lt;model-viewer&gt; template">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link type="text/css" href="./styles.css" rel="stylesheet"/>
+  </head>
+  <body>
+    <!-- <model-viewer> HTML element -->
+    <model-viewer src="medvsa-bud.gltf" ar ar-modes="webxr scene-viewer quick-look" camera-controls tone-mapping="neutral" poster="poster.webp" shadow-intensity="1.43" exposure="0.75">
+      <button class="Hotspot" slot="hotspot-2" data-position="0.4054561384603379m 0.5107355379371415m -0.04726507702134092m" data-normal="0.9482888301277407m -0.2890032470452477m 0.13124563936475922m" data-visibility-attribute="visible">
+          <div class="HotspotAnnotation">Venomous Bass</div>
+      </button><button class="Hotspot" slot="hotspot-6" data-position="-0.028174293009003287m 0.2852578464390847m -0.011337614123694481m" data-normal="-0.28431712847128665m -0.05539935552325287m 0.9571283518240646m" data-visibility-attribute="visible">
+          <div class="HotspotAnnotation">Long Tail</div>
+      </button><button class="Hotspot" slot="hotspot-8" data-position="-0.006535677281138436m 0.6032995473752034m 0.04961785163355657m" data-normal="-0.7216281212920677m -0.1685545852040225m 0.6714478433707124m" data-visibility-attribute="visible">
+          <div class="HotspotAnnotation">Scaly Grip</div>
+      </button><button class="Hotspot" slot="hotspot-9" data-position="0.22075067944313867m 0.6001069218373762m -0.2127467225377514m" data-normal="0.3864059335814981m 0.07994928156398895m -0.9188572070079296m" data-visibility-attribute="visible">
+          <div class="HotspotAnnotation">Silent Strike Noise Isolation</div>
+      </button>
+      <div class="progress-bar hide" slot="progress-bar">
+          <div class="update-bar"></div>
+      </div>
+      <button slot="ar-button" id="ar-button">
+          View in your space
+      </button>
+      <div id="ar-prompt">
+          <img src="ar_hand_prompt.png">
+      </div>
+    </model-viewer>  
+    <script src="script.js"></script>
+    <!-- Loads <model-viewer> for browsers: -->
+    <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/4.0.0/model-viewer.min.js"></script>
+  </body>
+</html>
