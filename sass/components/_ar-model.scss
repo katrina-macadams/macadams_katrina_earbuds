@@ -6,6 +6,16 @@ model-viewer {
     margin: 0 auto;
 }
 
+
+model-viewer::part(default-progress-bar) {
+    height: 30px;
+    background-color: #0f9302; 
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+
+
 // Custom Hotspots 
 .Hotspot {
     background: url(../images/hotspot.svg) center no-repeat;
@@ -14,13 +24,22 @@ model-viewer {
     border-radius: 50%;
     box-shadow: 0 0 15px rgba(0, 255, 0, 0.5);
     position: absolute; 
+    cursor: pointer;
+    transition: transform 0.2s ease, box-shadow 0.3s ease;
 }
 
+.Hotspot:hover {
+    transform: scale(1.2);
+    box-shadow: 0 0 15px rgba(0, 255, 0, 0.8);
+}
+
+
+/* Annotation Styling */
 .HotspotAnnotation {
     background: rgba(0, 0, 0, 0.9);
     color: #ffffff;
     border-radius: 4px;
-    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     font-size: 18px;
     font-weight: 700;
     left: calc(100% + 1em);
@@ -30,45 +49,12 @@ model-viewer {
     top: 50%;
     width: max-content;
     position: absolute;
-    opacity: 0; 
-}
-
-.Hotspot {
-    transform: scale(1.2); /* Slight zoom on hover */
-    box-shadow: 0 0 15px rgba(0, 255, 0, 0.8);
+    opacity: 0;
+    transition: opacity 0.1s ease-in-out;
 }
 
 
-@media screen and (min-width: 1200px) {
-    .Hotspot {
-        transition: transform 0.2s ease, box-shadow 0.3s ease;
-        cursor: pointer;
-    }
-
-    .Hotspot:hover {
-        transform: scale(1.2); /* Slight zoom on hover */
-        box-shadow: 0 0 15px rgba(0, 255, 0, 0.8);
-    }
-
-    .Hotspot:hover .HotspotAnnotation {
-        opacity: 1;
-    }
+.Hotspot:hover .HotspotAnnotation {
+    opacity: 1;
 }
 
-// customize progress bar
-
-
-// documentation for the progress bad in model viewer
-// There's documentations for everything referring to the model view, should read through all of them 
-
-// model-viewer::part(default-progress-bar) {
-//     height: 30px;
-//     background-color: #E89B36;
-// }
-
-// model-viewer tag: <model-viewer> <model-viewer> is in html already a selector that lets us select the shadow dom belongs specifically to a web component
-//  "if there's a part with the progress bar, select it"
-
-// part: whatever code gets written in 
-
-// to test: network tab, throttling, simulate different connections 
