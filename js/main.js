@@ -61,29 +61,13 @@
     // EVENTLISTENERS
   
     hotspots.forEach(hotspot => {
+      // For touch screen devices
       hotspot.addEventListener("click", showInfo);
+      // For hover devices
       hotspot.addEventListener("mouseover", showInfo);
       hotspot.addEventListener("mouseout", hideInfo)
     });
 
-    
-
-
-
-  // You hold each node in a temp placeholder
-  //  => grab this node list collections "hotspots" and loop through it, and each time i loop 
-  // through it I want to put it in a temp placeholder and then run a function
-  // hotspots = node list (array)
-  // put them in a temp place holder
-  // the add an add and event listener with mouseover and mouse out
-  // then define the fucntions
-  // event objects are hidden behind the scenes in JS everytime we use an eventlistener
-  // (e) for event capture
-  
-  // Marco wants us to dynamically load the content and include an images
-  // We will be using an x-ray view and regular view
-  // and a series of still frames for a scrolling animation 
-  // for our assignment ^^^
   
   })();
   
