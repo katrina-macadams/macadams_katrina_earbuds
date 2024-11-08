@@ -2,38 +2,74 @@
     console.log("IIFE Fired");
     // VARIABLES
     const hotspots = document.querySelectorAll(".Hotspot");
-    // console.log(hotspots);
+    const features = [
+      {
+        id:"hotspot-1",
+        title: "Venomous Bass",
+        imgSrc: "images/xray.jpg"
+      },
   
+      {
+        id:"hotspot-2",
+        title: "Long Tail",
+        imgSrc: "images/xray.jpg"
+      },
+   
+      {
+        id:"hotspot-3",
+        title: "Scaly Grip",
+        imgSrc: "images/xray.jpg"
+      },
+
+      {
+        id:"hotspot-4",
+        title: "Silent Strike Noise Cancellation",
+        imgSrc: "images/xray.jpg"
+      },
+  ];
+
     // FUNCTIONS
-  
+   
     function showInfo(e) {
-      // console.log("showInfo called");
-      // console.log(e.currentTarget.slot);
-      let selected = document.querySelector(`button[slot="${e.currentTarget.slot}" ]> div`);
-      // console.log(selected);
-      gsap.to(selected, 1, {autoAlpha: 1});
+      const slot = e.currentTarget.slot;
+    
+    let feature = null;
+      for (let i = 0; i < features.length; i++) {
+      if (features[i].id === slot) {
+      feature = features[i];
+      break;
     }
-    // tells me which hotspot user is hovering over
-    // es6 template literals = `
-    // dynamically create string. Want to drop in a variable = ${what is here becomes dynamic}
-    //  `${e.currenttarget.slot}
-    // (dynamic selectors)
-  
+  }
+    
+      if (feature) {
+        const selected = document.querySelector(`button[slot="${slot}"] > div`);
+        selected.innerHTML = `
+          <img src="${feature.imgSrc}" alt="${feature.title}">
+          ${feature.title}
+        `;
+        
+        gsap.to(selected, 1, { autoAlpha: 1 });
+      }
+    }
+    
     function hideInfo(e) {
-      // console.log("hideInfo called");
-      let selected = document.querySelector(`button[slot="${e.currentTarget.slot}" ]> div`);
-      gsap.to(selected, 1, {autoAlpha: 0});
+      const slot = e.currentTarget.slot;
+      const selected = document.querySelector(`button[slot="${slot}"] > div`);
+      gsap.to(selected, 1, { autoAlpha: 0 });
     }
-  
-    // animating stuff in greensock, (thing were animating, length/time, {autoAlpha= setting the opacity})
-    // can pass through multiples too!
-  
+    
     // EVENTLISTENERS
   
     hotspots.forEach(hotspot => {
+      hotspot.addEventListener("click", showInfo);
       hotspot.addEventListener("mouseover", showInfo);
       hotspot.addEventListener("mouseout", hideInfo)
     });
+
+    
+
+
+
   // You hold each node in a temp placeholder
   //  => grab this node list collections "hotspots" and loop through it, and each time i loop 
   // through it I want to put it in a temp placeholder and then run a function
@@ -43,48 +79,6 @@
   // then define the fucntions
   // event objects are hidden behind the scenes in JS everytime we use an eventlistener
   // (e) for event capture
-  
-  // Marco wants us to dynamically load the content and include an images
-  // We will be using an x-ray view and regular view
-  // and a series of still frames for a scrolling animation 
-  // for our assignment ^^^
-  
-  })();
-
-  (() => {
-    console.log("IIFE Fired");
-    // VARIABLES
-    const hotspots = document.querySelectorAll(".Hotspot");
-    // console.log(hotspots);
-  
-    // FUNCTIONS
-  
-    function showInfo(e) {
-      console.log("showInfo called");
-      console.log(e.currentTarget.slot);
-      let selected = document.querySelector(`button[slot="${e.currentTarget.slot}" ]> div`);
-      console.log(selected);
-      gsap.to(selected, 1, {autoAlpha: 1});
-    }
-    // tells me which hotspot user is hovering over
-    // dynamically create string. Want to drop in a variable = ${what is here becomes dynamic}
-    //  `${e.currenttarget.slot}
-    // (dynamic selectors)
-  
-    function hideInfo(e) {
-      console.log("hideInfo called");
-      let selected = document.querySelector(`button[slot="${e.currentTarget.slot}" ]> div`);
-      gsap.to(selected, 1, {autoAlpha: 0});
-    }
-  
-  
-    // EVENTLISTENERS
-  
-    hotspots.forEach(hotspot => {
-      hotspot.addEventListener("mouseover", showInfo);
-      hotspot.addEventListener("mouseout", hideInfo)
-    });
-  
   
   // Marco wants us to dynamically load the content and include an images
   // We will be using an x-ray view and regular view
