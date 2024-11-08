@@ -6,19 +6,19 @@
       {
         id:"hotspot-1",
         title: "Venomous Bass",
-        imgSrc: "images/xray.jpg"
+        imgSrc: "images/sound-waves.jpg"
       },
   
       {
         id:"hotspot-2",
-        title: "Long Tail",
-        imgSrc: "images/xray.jpg"
+        title: "Snake Inspired Design",
+        imgSrc: "images/snake-metal.jpg"
       },
    
       {
         id:"hotspot-3",
         title: "Scaly Grip",
-        imgSrc: "images/xray.jpg"
+        imgSrc: "images/scales.jpeg"
       },
 
       {
