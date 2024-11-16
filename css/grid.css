@@ -126,7 +126,7 @@ img, embed, object, video, picture {
   
   /* DESKTOP */
   
-  @media screen and (min-width: 1440px) { 
+  @media screen and (min-width: 1080px) { 
   
      .grid-con { 
         display: grid; 
