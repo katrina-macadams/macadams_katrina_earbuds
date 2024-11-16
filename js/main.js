@@ -1,3 +1,5 @@
+
+// AR VIEW
 (() => {
     console.log("IIFE Fired");
     // VARIABLES
@@ -83,6 +85,20 @@
       progressBar.classList.remove('hide');
     }
   };
+  
   document.querySelector('model-viewer').addEventListener('progress', onProgress);
   
+
+  // X-RAY
+  (() => {
+    const divisor = document.querySelector("#divisor");
+    const slider = document.querySelector("#slider");
+
+    function moveDivisor() {
+        console.log(slider.value);
+        divisor.style.width = slider.value+"%";
+    }
+
+    slider.addEventListener("input", moveDivisor);
   
+})();
