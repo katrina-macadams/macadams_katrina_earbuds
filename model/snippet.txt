@@ -1,12 +1,12 @@
-<model-viewer src="medvsa-bud.gltf" ar ar-modes="webxr scene-viewer quick-look" camera-controls tone-mapping="neutral" poster="poster.webp" shadow-intensity="1.43" exposure="0.75">
-    <button class="Hotspot" slot="hotspot-2" data-position="0.4054561384603379m 0.5107355379371415m -0.04726507702134092m" data-normal="0.9482888301277407m -0.2890032470452477m 0.13124563936475922m" data-visibility-attribute="visible">
-        <div class="HotspotAnnotation">Venomous Bass</div>
-    </button><button class="Hotspot" slot="hotspot-6" data-position="-0.028174293009003287m 0.2852578464390847m -0.011337614123694481m" data-normal="-0.28431712847128665m -0.05539935552325287m 0.9571283518240646m" data-visibility-attribute="visible">
-        <div class="HotspotAnnotation">Long Tail</div>
-    </button><button class="Hotspot" slot="hotspot-8" data-position="-0.006535677281138436m 0.6032995473752034m 0.04961785163355657m" data-normal="-0.7216281212920677m -0.1685545852040225m 0.6714478433707124m" data-visibility-attribute="visible">
-        <div class="HotspotAnnotation">Scaly Grip</div>
-    </button><button class="Hotspot" slot="hotspot-9" data-position="0.22075067944313867m 0.6001069218373762m -0.2127467225377514m" data-normal="0.3864059335814981m 0.07994928156398895m -0.9188572070079296m" data-visibility-attribute="visible">
-        <div class="HotspotAnnotation">Silent Strike Noise Isolation</div>
+<model-viewer src="medvsa-bud.gltf" ar ar-modes="webxr scene-viewer quick-look" camera-controls tone-mapping="agx" poster="poster.webp" shadow-intensity="2" exposure="2" shadow-softness="0.6" environment-image="black-line.jpg" skybox-image="black-line.jpg">
+    <button class="Hotspot" slot="hotspot-1" data-position="0.4059765413612827m 0.5197521943012229m -0.04307507715306211m" data-normal="0.9858333565507308m -0.09754919914674273m 0.13644320011546543m" data-visibility-attribute="visible">
+        <div class="HotspotAnnotation">Venomous Sound</div>
+    </button><button class="Hotspot" slot="hotspot-4" data-position="-0.06590430513570263m 0.455709008792417m -0.04973224141801909m" data-normal="-0.9791275079135113m 0.05838229214169232m 0.19468135815059245m" data-visibility-attribute="visible">
+        <div class="HotspotAnnotation">Ouroboros Charge</div>
+    </button><button class="Hotspot" slot="hotspot-5" data-position="0.2387580944311178m 0.5615246347067822m -0.2061848887043749m" data-normal="0.34730477386964687m -0.10272862069876665m -0.9321084832446718m" data-visibility-attribute="visible">
+        <div class="HotspotAnnotation">Silent Strike</div>
+    </button><button class="Hotspot" slot="hotspot-7" data-position="0.045454515348647445m 0.1880807817354192m -0.0665038893948634m" data-normal="0.9998066263652011m 0.016425370375971842m -0.010812820365085248m" data-visibility-attribute="visible">
+        <div class="HotspotAnnotation">Scaled Precision</div>
     </button>
     <div class="progress-bar hide" slot="progress-bar">
         <div class="update-bar"></div>

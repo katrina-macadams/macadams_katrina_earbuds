@@ -2,8 +2,37 @@
     console.log("IIFE Fired");
     // VARIABLES
     const hotspots = document.querySelectorAll(".Hotspot");
+<<<<<<< Updated upstream
     // console.log(hotspots);
   
+=======
+    const features = [
+      {
+        id:"hotspot-1",
+        title: "Venomous Sound",
+        imgSrc: "images/sound-waves.jpg"
+      },
+  
+      {
+        id:"hotspot-2",
+        title: "Ouroboros Charge",
+        imgSrc: "images/snake-metal.jpg"
+      },
+   
+      {
+        id:"hotspot-3",
+        title: "Silent Strike",
+        imgSrc: "images/scales.jpeg"
+      },
+
+      {
+        id:"hotspot-4",
+        title: "Scaled Precision",
+        imgSrc: "images/xray.jpg"
+      },
+  ];
+
+>>>>>>> Stashed changes
     // FUNCTIONS
   
     function showInfo(e) {
@@ -107,4 +136,22 @@
   };
   document.querySelector('model-viewer').addEventListener('progress', onProgress);
   
+<<<<<<< Updated upstream
   
+=======
+})();
+
+// Handles loading the events for <model-viewer>'s slotted progress bar
+const onProgress = (event) => {
+  const progressBar = event.target.querySelector('.progress-bar');
+  const updatingBar = event.target.querySelector('.update-bar');
+  updatingBar.style.width = `${event.detail.totalProgress * 100}%`;
+  if (event.detail.totalProgress === 1) {
+    progressBar.classList.add('hide');
+    event.target.removeEventListener('progress', onProgress);
+  } else {
+    progressBar.classList.remove('hide');
+  }
+};
+document.querySelector('model-viewer').addEventListener('progress', onProgress);
+>>>>>>> Stashed changes
