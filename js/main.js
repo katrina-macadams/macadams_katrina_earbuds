@@ -1,4 +1,57 @@
 
+// TABLE OF CONTENTS
+// Vertical Scroll
+// AR View
+// X-Ray
+
+
+// VERTICAL SCROLL
+(() => {
+
+  const canvas = document.querySelector("#vs-vid");
+  const context = canvas.getContext("2d");
+
+  canvas.width = 1440;
+  canvas.height = 900;
+
+  const frameCount = 75; 
+
+  const images = []; 
+
+  const buds = {
+      frame: 0
+  }
+
+  for(let i = 0; i < frameCount; i++) {
+      const img = new Image();
+      img.src = `images/vs-vid${(i+1).toString().padStart(4, '0')}.tif`;
+      images.push(img)
+
+  }
+
+  gsap.to(buds, {
+      frame: 75,
+      snap: "frame",
+      scrollTrigger: {
+          trigger: "#explode-view",
+          pin: true,
+          scrub: 1,
+          markers: true,
+          start: "top top"
+      },
+      onUpdate: render
+
+  })
+
+  images[0].addEventListener("load", render)
+
+  function render() {
+      context.clearRect(0,0, canvas.width, canvas.height)
+      context.drawImage(images[buds.frame], 0, 0);
+  }
+
+})();
+
 // AR VIEW
 (() => {
     console.log("IIFE Fired");
@@ -73,21 +126,6 @@
   
   })();
   
-  // Handles loading the events for <model-viewer>'s slotted progress bar
-  const onProgress = (event) => {
-    const progressBar = event.target.querySelector('.progress-bar');
-    const updatingBar = event.target.querySelector('.update-bar');
-    updatingBar.style.width = `${event.detail.totalProgress * 100}%`;
-    if (event.detail.totalProgress === 1) {
-      progressBar.classList.add('hide');
-      event.target.removeEventListener('progress', onProgress);
-    } else {
-      progressBar.classList.remove('hide');
-    }
-  };
-  
-  document.querySelector('model-viewer').addEventListener('progress', onProgress);
-  
 
   // X-RAY
   (() => {
@@ -102,3 +140,17 @@
     slider.addEventListener("input", moveDivisor);
   
 })();
+
+const onProgress = (event) => {
+  const progressBar = event.target.querySelector('.progress-bar');
+  const updatingBar = event.target.querySelector('.update-bar');
+  updatingBar.style.width = `${event.detail.totalProgress * 100}%`;
+  if (event.detail.totalProgress === 1) {
+    progressBar.classList.add('hide');
+    event.target.removeEventListener('progress', onProgress);
+  } else {
+    progressBar.classList.remove('hide');
+  }
+};
+
+document.querySelector('model-viewer').addEventListener('progress', onProgress);
