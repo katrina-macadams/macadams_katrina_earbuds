@@ -10,6 +10,7 @@ img, embed, object, video, picture {
      margin: 0px; 
      padding: 0px;
   }
+
   
  /* UTLITY  */
   
@@ -111,16 +112,6 @@ img, embed, object, video, picture {
      .m-col-end-12	{grid-column-end: 12;}
      .m-col-end-13	{grid-column-end: 13;}
      .m-col-end-auto	{grid-column-end: auto;}
-  
-/* Nav */
- 
- #burger-button {
-   display: none;
-  }
-
-  #burger-con {
-   display: block;
-  }
   
   }
   
