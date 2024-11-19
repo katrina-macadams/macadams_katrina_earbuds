@@ -8,6 +8,10 @@
 // VERTICAL SCROLL
 (() => {
 
+  gsap.registerPlugin(ScrollTrigger)
+
+  
+
   const canvas = document.querySelector("#vs-vid");
   const context = canvas.getContext("2d");
 
@@ -30,18 +34,18 @@
   }
 
   gsap.to(buds, {
-      frame: 75,
-      snap: "frame",
-      scrollTrigger: {
-          trigger: "#explode-view",
-          pin: true,
-          scrub: 1,
-          markers: true,
-          start: "top top"
-      },
-      onUpdate: render
-
-  })
+    frame: 74,
+    snap: "frame",
+    scrollTrigger: {
+      trigger: "#vs-vid",
+      pin: true,                  
+      scrub: 3,                 
+      markers: true,              
+      start: "top top",                         
+    },
+    onUpdate: render,
+  });
+  
 
   images[0].addEventListener("load", render)
 
@@ -54,31 +58,31 @@
 
 // AR VIEW
 (() => {
-    console.log("IIFE Fired");
+  
     // VARIABLES
     const hotspots = document.querySelectorAll(".Hotspot");
     const features = [
       {
         id:"hotspot-1",
-        title: "Venomous Bass",
+        title: "Venomous Sound",
         imgSrc: "images/sound-waves.jpg"
       },
   
       {
         id:"hotspot-2",
-        title: "Snake Inspired Design",
+        title: "Ouroboros Charge",
         imgSrc: "images/snake-metal.jpg"
       },
    
       {
         id:"hotspot-3",
-        title: "Scaly Grip",
+        title: "Silent Strike",
         imgSrc: "images/scales.jpeg"
       },
 
       {
         id:"hotspot-4",
-        title: "Silent Strike Noise Cancellation",
+        title: "Scaled Precision",
         imgSrc: "images/xray.jpg"
       },
   ];
