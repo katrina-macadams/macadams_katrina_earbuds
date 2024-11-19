@@ -9,11 +9,23 @@
     <link rel="stylesheet" href="css/grid.css">
   </head> 
   <body>
+<header class="grid-con">
+    <img id="header-logo" class="col-span-1" src="images/medvsa-w.svg" alt="medusa logo">
+    <h2 class="hidden">Main Navigation</h2>
+        <nav id="main-nav" class="col-start-3 col-span-full l-col-start">
+                <ul class="nav-menu col-span-full">
+                    <li class="nav-link m-col-start-1 col-span-2"><a href="#">Home</a></li>
+                    <li class="nav-link col-start-2 col-span-2"><a href="#">AR view</a></li>
+                    <li class="nav-link col-start-3 col-span-2"><a href="#">Colours</a></li>
+                    <li class="nav-link col-start-3 col-span-2"><a href="#">X-Ray View</a></li>
+                    <li class="nav-link col-start-3 col-span-2"><a href="#">Buy Now</a></li>
+                </ul>
+        </nav>
+    </header>
     <div id="smooth-wrapper">
       <div id="smooth-content" class="col-span-full">
         <canvas id="vs-vid"></canvas>
       </div>
-
     <!-- <model-viewer> HTML element -->
       <model-viewer src="model/medvsa-bud.gltf" ar ar-modes="webxr scene-viewer quick-look" camera-controls tone-mapping="agx" poster="images/poster.webp" shadow-intensity="2" exposure="2" shadow-softness="0.6" environment-image="images/black-line.jpg" skybox-image="images/black-line.jpg">
         <button class="Hotspot" slot="hotspot-1" data-position="0.4059765413612827m 0.5197521943012229m -0.04307507715306211m" data-normal="0.9858333565507308m -0.09754919914674273m 0.13644320011546543m" data-visibility-attribute="visible">
@@ -53,6 +65,8 @@
 
   </div>
 </section>
+
+
   <!-- Loads <model-viewer> for browsers: -->
     <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/4.0.0/model-viewer.min.js"></script>
   </body>

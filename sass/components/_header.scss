@@ -1,0 +1,47 @@
+
+#header-logo {
+    width: 74px;
+    height: auto;
+    margin-top: 14px;
+    margin-left: 24px;
+}
+
+ul, li {
+    list-style-type: none;
+}
+
+
+.nav-menu {
+    margin-top: 14px; 
+    margin-right: 24px;
+}
+
+.nav-menu ul {
+    text-decoration-line: none;
+}
+
+.nav-link {
+    margin-top: 8px;
+    transition: 0.8s ease;
+}
+
+.nav-link:hover {
+    color:white;
+    font-weight: 400;
+    cursor: pointer;
+}
+
+ li {
+    text-align: right;
+}
+
+.nav-link a {
+ 
+    font-size: 24px;
+    color: white;
+    text-decoration-line: none;
+}
+ 
+
+ 
+ 
