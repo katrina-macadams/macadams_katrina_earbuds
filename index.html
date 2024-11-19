@@ -7,12 +7,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="css/grid.css">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.1/gsap.min.js"></script>
   </head> 
   <body>
-    <div class="col-span-full">
-      <canvas id="vs-vid"></canvas> 
-  </div>
+    <div id="smooth-wrapper">
+      <div id="smooth-content" class="col-span-full">
+        <canvas id="vs-vid"></canvas>
+      </div>
 
     <!-- <model-viewer> HTML element -->
       <model-viewer src="model/medvsa-bud.gltf" ar ar-modes="webxr scene-viewer quick-look" camera-controls tone-mapping="agx" poster="images/poster.webp" shadow-intensity="2" exposure="2" shadow-softness="0.6" environment-image="images/black-line.jpg" skybox-image="images/black-line.jpg">
@@ -58,6 +58,7 @@
   </body>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.0/gsap.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.0/ScrollTrigger.js"></script>
+  <script src="js/ScrollSmoother.min.js"></script>
   <script src="js/main.js"></script>
 </html>
 
