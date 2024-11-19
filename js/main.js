@@ -33,18 +33,39 @@
 
   }
 
-  gsap.to(buds, {
-    frame: 74,
-    snap: "frame",
-    scrollTrigger: {
-      trigger: "#vs-vid",
-      pin: true,                  
-      scrub: 3,                 
-      markers: true,              
-      start: "top top",                         
+  ScrollTrigger.matchMedia({
+    // Desktop
+    "(min-width: 768px)": function() {
+      gsap.to(buds, {
+        frame: 74,
+        snap: "frame",
+        scrollTrigger: {
+          trigger: "#vs-vid",
+          pin: true,
+          scrub: 2.5,
+          start: 300,
+          end: "bottom+=200 top",
+        },
+        onUpdate: render,
+      });
     },
-    onUpdate: render,
+  
+    // Mobile
+    "(max-width: 767px)": function() {
+      gsap.to(buds, {
+        frame: 74,
+        snap: "frame",
+        scrollTrigger: {
+          trigger: "#vs-vid",
+          pin: false,
+          scrub: 1.5,
+          start: 1,
+        },
+        onUpdate: render,
+      });
+    },
   });
+  
   
 
   images[0].addEventListener("load", render)
