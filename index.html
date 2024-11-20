@@ -5,8 +5,10 @@
     <meta charset="utf-8">
     <meta name="description" content="&lt;model-viewer&gt; template">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://use.typekit.net/gnf1bvf.css">
     <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="css/grid.css">
+    <link rel="stylesheet" href="https://cdn.plyr.io/3.7.8/plyr.css">
   </head> 
   <body>
 <header class="grid-con">
@@ -24,7 +26,19 @@
       </header>
       <div class="col-span-full">
         <canvas id="vs-vid"></canvas>
+        <div id="overlay">
+          <h1 class="title">Strike with Precision</h1>
+          <p class="subheader">Immerse yourself in venomous sound, engineered for those who dare to listen differently.</p>
+        </div>
       </div>
+
+      <section id="ar-header-sec"class="grid-con">
+        <div id="ar-header" class="col-start-2 col-span-3">
+          <h2>Unlock the Secrets of the Snake</h2>
+          <p>Dive into the serpentine design and cutting-edge sound—right in your space.</p>
+        </div>
+      </section>
+
     <!-- <model-viewer> HTML element -->
       <model-viewer src="model/medvsa-bud.gltf" ar ar-modes="webxr scene-viewer quick-look" camera-controls tone-mapping="agx" poster="images/poster.webp" shadow-intensity="2" exposure="2" shadow-softness="0.6" environment-image="images/black-line.jpg" skybox-image="images/black-line.jpg">
         <button class="Hotspot" slot="hotspot-1" data-position="0.4059765413612827m 0.5197521943012229m -0.04307507715306211m" data-normal="0.9858333565507308m -0.09754919914674273m 0.13644320011546543m" data-visibility-attribute="visible">
@@ -47,8 +61,42 @@
         </div>
       </model-viewer> 
 
+  
+  <section id="pick-your-poison" class="grid-con">
+    <div class="col-start-2 col-span-2">
+      <h1>Pick Your Poison</h1>
+      <p>Unleash Your Style With Striking Colour Options</p>
+    </div>
+    <div class="grid-con col-span-full">
+      <img class="col-span-2" src="images/poster-4-medvsa.jpg" alt="Green Buds">
+      <img class="col-span-2" src="images/poster-5-medvsa.jpg" alt="Black Buds">
+      <img class="col-start-2 col-span-2" src="images/poster-6-medvsa.jpg" alt="White Buds">
+    </div>
+  </section>
 
   <section class="grid-con">
+    <div class="col-start-2 col-span-2">
+      <h2>Medvsa's Melody: Audio That Mesmerizes</h2>
+      <p>Turn Sound Into Stone Cold Perfection</p>
+      <section class="grid-con">
+        <h2 class="hidden">Video Section</h2>
+        <div id="video-player" class="col-span-full m-col-span-full l-col-span-full">
+            <video controls preload="metadata">
+                <source src="videos/3d-book-placeholder.mp4" type="video/mp4">
+                <!-- https://youtu.be/hPcj87uITnU?si=R0OCavgx1N-L_LKZ placeholder used -->
+            </video>
+        </div>
+    </section>
+    </div>
+  </section>
+
+
+
+  <section class="grid-con">
+    <div id="xray-header" class="col-span-2">    
+      <h2>The Serpents Anatomy</h2>
+      <p>Peer into the heart of Medusa's power and design.</p>
+    </div>
   <div class="col-span-full">
     <div id="mobile-tablet-view">
         <img src="images/xray.jpg" alt="x-ray">
@@ -65,10 +113,35 @@
   </div>
 </section>
 
+<footer>
+  <div id="footer-content" class="grid-con">
+      <img id="footer-logo" class="col-span-1" src="images/medvsa-w.svg">
+
+    <div class="footer-signup col-span-3 col-start-4">
+      <button>Sign Up</button>
+    </div>
+
+      <div id="acolyte" class="col-start-2 col-span-2">
+        <p id="a-text">Become an Acolyte of Medvsa Today.</p>
+      </div>
+
+      <div class="divider col-span-full"></div>
+
+
+      <div class="footer-links col-span-full">
+        <a href="#">©2024 Medvsa</a>
+        <a href="#">Cookie Settings</a>
+        <a href="#">Terms and Conditions</a>
+        <a href="#">Privacy Policy</a>
+      </div>
+
+    </div>
+</footer>
 
   <!-- Loads <model-viewer> for browsers: -->
     <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/4.0.0/model-viewer.min.js"></script>
   </body>
+  <script src="https://cdn.plyr.io/3.7.8/plyr.js"></script> 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.0/gsap.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.0/ScrollTrigger.js"></script>
   <script src="js/ScrollSmoother.min.js"></script>

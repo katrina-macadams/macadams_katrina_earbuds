@@ -2,8 +2,10 @@
 // TABLE OF CONTENTS
 // Vertical Scroll
 // AR View
+// Horizontal Scroll
 // X-Ray
 
+const player = new Plyr('video'); 
 
 // VERTICAL SCROLL
 (() => {
@@ -150,6 +152,8 @@
 
   
   })();
+
+
   
 
   // X-RAY
