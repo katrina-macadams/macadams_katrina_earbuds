@@ -1,16 +1,35 @@
 #vs-vid {
   display: block;
   width: 100%;
-  height: auto; /* Adjust height dynamically */
+  height: auto; 
 }
 
 canvas {
-  width: 100%; /* Ensures it scales correctly on mobile */
+  width: 100%; 
   height: auto;
 }
 
 #vs-vid-container {
   position: relative;
-  height: 100vh; /* Makes sure the animation area fits the viewport height */
-  overflow: hidden; /* Prevents extra space from appearing */
+  height: 100vh; 
+  overflow: hidden; 
+}
+
+#overlay {
+  position: absolute;
+  top: 30%;
+  left: 40%;
+  transform: translate(-50%, -50%);
+  text-align: left;
+  color: white;
+  pointer-events: none; /* Makes sure overlay doesn't block interactions with the canvas */
+  z-index: 2; /* Ensure it appears above the canvas */
+}
+
+.title {
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+}
+
+.subheader {
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
 }
