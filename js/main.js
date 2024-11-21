@@ -10,14 +10,20 @@ const player = new Plyr('video');
 // SCROLL TRIGGER LINKS 
 
 (() => {
+  gsap.registerPlugin(ScrollTrigger);
+  gsap.registerPlugin(ScrollToPlugin);
 
-  const navLinks = document.querySelectorAll("#main-nav nav ul li a");
+  const navLinks = document.querySelectorAll("#main-header nav ul li a");
+
 
   function scrollLink(e) {    
           e.preventDefault(); 
           console.log(e.currentTarget.hash);
           let selectedLink = e.currentTarget.hash;
-          gsap.to(window, {duration: 1, scrollTo:{y:`${selectedLink}`, offsetY:100 }});
+          gsap.to(window, {duration: 2, scrollTo:{y:`${selectedLink}`, offsetY:100 },
+            ease: "power3.out"
+          });
+  
   }
 
   navLinks.forEach((link) => {
@@ -62,8 +68,7 @@ const player = new Plyr('video');
           trigger: "#vs-vid",
           pin: true,
           scrub: 2.5,
-          start: 300,
-          end: "bottom+=200 top",
+          start: 125,
         },
         onUpdate: render,
       });
