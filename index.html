@@ -11,16 +11,16 @@
     <link rel="stylesheet" href="https://cdn.plyr.io/3.7.8/plyr.css">
   </head> 
   <body>
-<header class="grid-con">
-    <img id="header-logo" class="col-span-1" src="images/medvsa-w.svg" alt="medusa logo">
+<header id="#home" class="grid-con">
+    <img id="header-logo" class="col-span-1" src="images/medvsa-w.svg"  alt="medusa logo" href="#home">
     <h2 class="hidden">Main Navigation</h2>
-        <nav id="main-nav" class="col-start-3 col-span-full l-col-start-9">
-                <ul class="nav-menu col-span-full">
-                    <li class="nav-link m-col-start-1 col-span-2"><a href="#">Home</a></li>
-                    <li class="nav-link col-start-2 col-span-2"><a href="#">AR view</a></li>
-                    <li class="nav-link col-start-3 col-span-2"><a href="#">Colours</a></li>
-                    <li class="nav-link col-start-3 col-span-2"><a href="#">X-Ray View</a></li>
-                    <li class="nav-link col-start-3 col-span-2"><a href="#">Buy Now</a></li>
+        <nav id="main-nav" class="col-start-4 col-span-full">
+                <ul class="nav-menu col-span-full grid-con">
+                    <li class="nav-link col-start-3 col-span-1 m-col-start-4"><a href="#ar">AR</a></li>
+                    <li class="nav-link col-start-3 col-span-1 m-col-start-6"><a href="#colours">Colours</a></li>
+                    <li class="nav-link col-start-3 col-span-1 m-col-start-8"><a href="#promo">Promo</a></li>
+                    <li class="nav-link col-start-3 col-span-1 m-col-start-10"><a href="#xray">X-Ray</a></li>
+                    <li class="nav-link col-start-3 col-span-1 m-col-start-12"><a href="#buynow">Buy Now</a></li>
                 </ul>
         </nav>
       </header>
@@ -32,7 +32,7 @@
         </div>
       </div>
 
-      <section id="ar-header-sec"class="grid-con">
+      <section id="ar"class="grid-con">
         <div id="ar-header" class="col-start-2 col-span-3">
           <h2>Unlock the Secrets of the Snake</h2>
           <p>Dive into the serpentine design and cutting-edge sound—right in your space.</p>
@@ -62,38 +62,33 @@
       </model-viewer> 
 
   
-  <section id="pick-your-poison" class="grid-con">
-    <div class="col-start-2 col-span-2">
-      <h1>Pick Your Poison</h1>
+  <section id="colours" class="grid-con">
+    <div class="pick-poison col-start-2 col-span-2">
+      <h2>Pick Your Poison</h2>
       <p>Unleash Your Style With Striking Colour Options</p>
     </div>
     <div class="grid-con col-span-full">
-      <img class="col-span-2" src="images/poster-4-medvsa.jpg" alt="Green Buds">
-      <img class="col-span-2" src="images/poster-5-medvsa.jpg" alt="Black Buds">
-      <img class="col-start-2 col-span-2" src="images/poster-6-medvsa.jpg" alt="White Buds">
+      <img class="col-span-2" src="images/greenbuds.png" alt="Green Buds">
+      <img class="col-span-2" src="images/blackbuds.jpg" alt="Black Buds">
+      <img class="col-start-2 col-span-2" src="images/whitebuds.tiff" alt="White Buds">
     </div>
   </section>
 
-  <section class="grid-con">
-    <div class="col-start-2 col-span-2">
-      <h2>Medvsa's Melody: Audio That Mesmerizes</h2>
-      <p>Turn Sound Into Stone Cold Perfection</p>
-      <section class="grid-con">
-        <h2 class="hidden">Video Section</h2>
+  <section id="promo" class="grid-con">
+      <h2 class="col-span-full">Medvsa's Melody: Audio That Mesmerizes</h2>
+      <p class="col-span-full">Turn Sound Into Stone Cold Perfection</p>
         <div id="video-player" class="col-span-full m-col-span-full l-col-span-full">
             <video controls preload="metadata">
-                <source src="videos/3d-book-placeholder.mp4" type="video/mp4">
+                <source src="videos/medvsa-promo.mp4" type="video/mp4">
                 <!-- https://youtu.be/hPcj87uITnU?si=R0OCavgx1N-L_LKZ placeholder used -->
             </video>
-        </div>
-    </section>
     </div>
   </section>
 
 
 
-  <section class="grid-con">
-    <div id="xray-header" class="col-span-2">    
+  <section id="xray" class="grid-con">
+    <div id="xray-header" class="col-span-3">    
       <h2>The Serpents Anatomy</h2>
       <p>Peer into the heart of Medusa's power and design.</p>
     </div>
@@ -117,8 +112,8 @@
   <div id="footer-content" class="grid-con">
       <img id="footer-logo" class="col-span-1" src="images/medvsa-w.svg">
 
-    <div class="footer-signup col-span-3 col-start-4">
-      <button>Sign Up</button>
+    <div id="buynow" class="footer-buynow col-span-3 col-start-4">
+      <button>Buy Now</button>
     </div>
 
       <div id="acolyte" class="col-start-2 col-span-2">

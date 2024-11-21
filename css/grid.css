@@ -6,9 +6,13 @@ img, embed, object, video, picture {
   
 /* CSS RESET */
   
-  body, p, h1, h2, h3, h4, h5 {
+  body, h1, h3, h4, h5 {
      margin: 0px; 
      padding: 0px;
+  }
+
+  h2, p {
+   margin: 8px 0px;
   }
 
   
