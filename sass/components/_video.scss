@@ -1,3 +1,11 @@
 #promo {
-    margin: 24px 0px 12px 24px;
+    margin: 48px 0px 12px 28px;
 }
+
+:root {
+    --plyr-color-main: rgb(1, 77, 1);
+    --plyr-control-icon-size: 14px;
+    --plyr-control-radius: 5px;
+    --plyr-font-family: "futura-pt", sans-serif;
+    --plyr-control-spacing: 14px;
+  }
