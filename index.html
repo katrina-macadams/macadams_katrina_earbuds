@@ -11,10 +11,10 @@
     <link rel="stylesheet" href="https://cdn.plyr.io/3.7.8/plyr.css">
   </head> 
   <body>
-<header id="#home" class="grid-con">
-    <img id="header-logo" class="col-span-1" src="images/medvsa-w.svg"  alt="medusa logo" href="#home">
+<header id="main-header" class="grid-con">
+    <img id="header-logo" class="col-span-1" src="images/medvsa-w.svg"  alt="medusa logo" href="#">
     <h2 class="hidden">Main Navigation</h2>
-        <nav id="main-nav" class="col-start-4 col-span-full">
+    <nav id="main-nav" class="col-start-4 col-span-full">
                 <ul class="nav-menu col-span-full grid-con">
                     <li class="nav-link col-start-3 col-span-1 m-col-start-4"><a href="#ar">AR</a></li>
                     <li class="nav-link col-start-3 col-span-1 m-col-start-6"><a href="#colours">Colours</a></li>
@@ -22,9 +22,9 @@
                     <li class="nav-link col-start-3 col-span-1 m-col-start-10"><a href="#xray">X-Ray</a></li>
                     <li class="nav-link col-start-3 col-span-1 m-col-start-12"><a href="#buynow">Buy Now</a></li>
                 </ul>
-        </nav>
+      </nav>
       </header>
-      <div class="col-span-full">
+      <div class="col-span-full m-col-start-2 m-col-span-4">
         <canvas id="vs-vid"></canvas>
         <div id="overlay">
           <h1 class="title">Strike with Precision</h1>
@@ -33,7 +33,7 @@
       </div>
 
       <section id="ar"class="grid-con">
-        <div id="ar-header" class="col-start-2 col-span-3">
+        <div id="ar-header" class="col-start-2 col-span-3 m-col-start-8 m-col-span-4">
           <h2>Unlock the Secrets of the Snake</h2>
           <p>Dive into the serpentine design and cutting-edge sound—right in your space.</p>
         </div>
@@ -63,14 +63,14 @@
 
   
   <section id="colours" class="grid-con">
-    <div class="pick-poison col-start-2 col-span-2">
+    <div class="pick-poison col-start-2 col-span-2 m-col-start-5 m-col-span-4">
       <h2>Pick Your Poison</h2>
       <p>Unleash Your Style With Striking Colour Options</p>
     </div>
     <div class="grid-con col-span-full">
-      <img class="col-span-2" src="images/greenbuds.png" alt="Green Buds">
-      <img class="col-span-2" src="images/blackbuds.jpg" alt="Black Buds">
-      <img class="col-start-2 col-span-2" src="images/whitebuds.tiff" alt="White Buds">
+      <img class="col-span-2 m-col-start-3 m-col-span-3" src="images/greenbuds.png" alt="Green Buds">
+      <img class="col-span-2 m-col-start-6 m-col-span-3" src="images/blackbuds.jpg" alt="Black Buds">
+      <img class="col-start-2 col-span-2 m-col-start-9 m-col-span-3" src="images/whitebuds.tiff" alt="White Buds">
     </div>
   </section>
 
@@ -88,7 +88,7 @@
 
 
   <section id="xray" class="grid-con">
-    <div id="xray-header" class="col-span-3">    
+    <div id="xray-header" class="col-span-3 m-col-start-2 m-col-span-4">    
       <h2>The Serpents Anatomy</h2>
       <p>Peer into the heart of Medusa's power and design.</p>
     </div>
@@ -110,13 +110,13 @@
 
 <footer>
   <div id="footer-content" class="grid-con">
-      <img id="footer-logo" class="col-span-1" src="images/medvsa-w.svg">
+      <img id="footer-logo" class="col-span-1 m-col-start-2" src="images/medvsa-w.svg">
 
-    <div id="buynow" class="footer-buynow col-span-3 col-start-4">
+    <div id="buynow" class="footer-buynow col-span-3 col-start-4 m-col-start-10">
       <button>Buy Now</button>
     </div>
 
-      <div id="acolyte" class="col-start-2 col-span-2">
+      <div id="acolyte" class="col-start-2 col-span-2 m-col-start-5 m-col-span-4">
         <p id="a-text">Become an Acolyte of Medvsa Today.</p>
       </div>
 
@@ -139,7 +139,8 @@
   <script src="https://cdn.plyr.io/3.7.8/plyr.js"></script> 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.0/gsap.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.0/ScrollTrigger.js"></script>
-  <script src="js/ScrollSmoother.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollToPlugin.min.js"></script>
+
   <script src="js/main.js"></script>
 </html>
 
