@@ -12,7 +12,7 @@
   </head> 
   <body>
 <header id="main-header" class="grid-con">
-    <img id="header-logo" class="col-span-1" src="images/medvsa-w.svg"  alt="medusa logo" href="#">
+    <img id="header-logo" class="col-span-1" src="images/medvsa-w.svg"  alt="medusa logo">
     <h2 class="hidden">Main Navigation</h2>
     <nav id="main-nav" class="col-start-4 col-span-full">
                 <ul class="nav-menu col-span-full grid-con">
@@ -32,7 +32,7 @@
         </div>
       </div>
 
-      <section id="ar"class="grid-con">
+      <section id="ar" class="grid-con">
         <div id="ar-header" class="col-start-2 col-span-3 m-col-start-8 m-col-span-4">
           <h2>Unlock the Secrets of the Snake</h2>
           <p>Dive into the serpentine design and cutting-edge sound—right in your space.</p>
@@ -57,7 +57,7 @@
             View in your space
         </button>
         <div id="ar-prompt">
-            <img src="images/ar_hand_prompt.png">
+            <img src="images/ar_hand_prompt.png" alt="ar hand prompt">
         </div>
       </model-viewer> 
 
@@ -97,33 +97,32 @@
         <img src="images/xray.jpg" alt="x-ray">
         <img src="images/greenray.jpg" alt="regular view">
     </div>
-
     <div id="comparison-con">
-        <div id="xray">
-            <div id="divisor"></div>
-        </div>
-        <input type="range" min="0" max="100" value="50" id="slider">
-    </div>
-
+      <div id="xray">
+          <div id="divisor"></div>
+      </div>
+      <input type="range" min="0" max="100" value="50" id="slider">
   </div>
-</section>
+</div>
+
+  </section>
 
 <footer>
   <div id="footer-content" class="grid-con">
-      <img id="footer-logo" class="col-span-1 m-col-start-2" src="images/medvsa-w.svg">
+      <img id="footer-logo" class="col-span-1 m-col-start-2" src="images/medvsa-w.svg" alt="Medusa Logo">
 
-    <div id="buynow" class="footer-buynow col-span-3 col-start-4 m-col-start-10">
+    <div id="buynow" class="footer-buynow col-span-4 col-start-4 m-col-start-10 m-col-span-3">
       <button>Buy Now</button>
     </div>
 
-      <div id="acolyte" class="col-start-2 col-span-2 m-col-start-5 m-col-span-4">
+      <div id="acolyte" class="col-start-2 col-span-3 m-col-start-5 m-col-span-4">
         <p id="a-text">Become an Acolyte of Medvsa Today.</p>
       </div>
 
-      <div class="divider col-span-full"></div>
+      <div class="divider col-start-2 col-span-full"></div>
 
 
-      <div class="footer-links col-span-full">
+      <div class="footer-links col-start-2 col-span-full">
         <a href="#">©2024 Medvsa</a>
         <a href="#">Cookie Settings</a>
         <a href="#">Terms and Conditions</a>
@@ -136,11 +135,10 @@
   <!-- Loads <model-viewer> for browsers: -->
     <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/4.0.0/model-viewer.min.js"></script>
   </body>
-  <script src="https://cdn.plyr.io/3.7.8/plyr.js"></script> 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.0/gsap.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.0/ScrollTrigger.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollToPlugin.min.js"></script>
-
+  <script src="https://cdn.plyr.io/3.7.8/plyr.js"></script> 
   <script src="js/main.js"></script>
 </html>
 
