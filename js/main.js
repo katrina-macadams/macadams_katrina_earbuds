@@ -110,25 +110,29 @@ const player = new Plyr('video');
       {
         id:"hotspot-1",
         title: "Venomous Sound",
+        text: "Crisp highs and deep, venomous bass that strike without warning.",
         imgSrc: "images/sound-waves.jpg"
       },
   
       {
         id:"hotspot-2",
         title: "Ouroboros Charge",
-        imgSrc: "images/snake-metal.jpg"
+        text: "Endless energy in every cycle. Revolutionary fast-charging tech keeps your earbuds powered.",
+        imgSrc: "images/xray.jpg"
       },
    
       {
         id:"hotspot-3",
         title: "Silent Strike",
-        imgSrc: "images/scales.jpeg"
+        text: "Advanced noise-canceling ensures every move is as stealthy as a serpent in the shadows.",
+        imgSrc: "images/snake-metal.jpg"
       },
 
       {
         id:"hotspot-4",
         title: "Scaled Precision",
-        imgSrc: "images/xray.jpg"
+        text: "Ergonomic design with a textured grip delivers comfort and control, scaled to fit you.",
+        imgSrc: "images/scales.jpeg"
       },
   ];
 
@@ -149,7 +153,7 @@ const player = new Plyr('video');
         const selected = document.querySelector(`button[slot="${slot}"] > div`);
         selected.innerHTML = `
           <img src="${feature.imgSrc}" alt="${feature.title}">
-          ${feature.title}
+          <h3>${feature.title}</h3> <p>${feature.text}</p>
         `;
         
         gsap.to(selected, 1, { autoAlpha: 1 });
